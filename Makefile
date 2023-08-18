@@ -6,7 +6,7 @@
 #    By: ozozdemi <ozozdemi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/17 16:40:50 by ozozdemi          #+#    #+#              #
-#    Updated: 2023/07/17 16:49:48 by ozozdemi         ###   ########.fr        #
+#    Updated: 2023/07/19 16:13:22 by ozozdemi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ NAME =		pipex
 CC =		@cc
 CFLAGS =	-Wall -Wextra -Werror -g3
 OBJ =		$(patsubst src%, obj%, $(SRC:.c=.o))
-SRC =		src/
+SRC =		src/pipex.c \
+		src/error.c \
+		src/path.c \
+		src/free.c \
+		src/child.c \
 
 all:		obj ${NAME}
 
