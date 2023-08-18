@@ -6,7 +6,7 @@
 /*   By: ozozdemi <ozozdemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:40:02 by ozozdemi          #+#    #+#             */
-/*   Updated: 2023/08/15 15:15:43 by ozozdemi         ###   ########.fr       */
+/*   Updated: 2023/08/18 14:53:57 by ozozdemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void	end_pipeprocess(t_pipex *pipex)
 		msg_perror("close Error\n");
 	if (close(pipex->tube[1]) == -1)
 		msg_perror("close Error\n");
+	close(pipex->infile);
+	close(pipex->outfile);
 }
 
 void	freexit(t_pipex pipex)
